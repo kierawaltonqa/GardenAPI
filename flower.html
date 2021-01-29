@@ -47,7 +47,7 @@
         <nav class="container">
             <nav class="row">
                 <nav class="col-md">
-                    <h1 class="text-center display-1">Garden Creation</h1>
+                    <h1 class="text-center display-1">Flower Creation</h1>
                 </nav>
             </nav>
             <nav class="row">
@@ -73,7 +73,8 @@
             </nav>
 
         </nav>
-        <div class="modal" id="createMethod">
+
+        <div class="modal fade " id="createMethod" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -83,28 +84,32 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <input class="input-group-text" type="text" id="colour" placeholder="colour" />
-                        </div>
-                        <div class="row">
-                            <input class="input-group-text" type="number" id="height" placeholder="height" />
-                        </div>
-                        <div class="row">
+                        <form>
 
-                            <input class="input-group-text" type="text" id="poisionous" placeholder="Please enter Yes or No" />
-
-                            <!-- <label>Poisonous?</p>
-                                <input type="radio" id="yes" name="Poisonous?">Yes </input> <br />
-                                <input type="radio" id="no" name="Poisonous?">No </input> <br /> -->
-                        </div>
-                        <div class="row">
-                            <input class="input-group-text" type="number" name="price" id="price" placeholder="Price">
-                        </div>
-                        <div class="row">
+                            <div class="mb-3">
+                                <input class="input-group-text" type="text" id="colour" placeholder="colour" />
+                            </div>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="number" id="height" placeholder="height" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="poisonous">Poisonous?</label>
+                                
+                                <input class="input-group-text" type="text" id="poisonous" placeholder="Please enter Yes or No" />
+                                
+                                <!-- <label>Poisonous?</p>
+                                    <input type="radio" id="yes" name="Poisonous?">Yes </input> <br />
+                                    <input type="radio" id="no" name="Poisonous?">No </input> <br /> -->
+                                </div>
+                                <div class="mb-3">
+                                    <input class="input-group-text" type="number" name="price" id="price" placeholder="Price">
+                                </div>
+                                <div class="mb-3">
                             <input class="input-group-text" type="text" name="type" id="name" placeholder="Name">
-
+                            
                         </div>
-
+                        
+                    </form>
                     </div>
                     <div class="modal-footer">
                         <p>This is the modal footer</p>
@@ -112,6 +117,7 @@
                 </div>
             </div>
         </div>
+    
 
         <!-- Modal for update -->
         
@@ -126,24 +132,24 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <input class="input-group-text" type="text" id="colour" placeholder="colour" />
+                            <input class="input-group-text" type="text" id="updateColour" placeholder="colour" />
                         </div>
                         <div class="row">
-                            <input class="input-group-text" type="number" id="height" placeholder="height" />
+                            <input class="input-group-text" type="number" id="updateHeight" placeholder="height" />
                         </div>
                         <div class="row">
 
-                            <input class="input-group-text" type="text" id="poisionous" placeholder="Please enter Yes or No" />
+                            <input class="input-group-text" type="text" id="updatePoisonous" placeholder="Please enter Yes or No" />
 
                             <!-- <label>Poisonous?</p>
                                 <input type="radio" id="yes" name="Poisonous?">Yes </input> <br />
                                 <input type="radio" id="no" name="Poisonous?">No </input> <br /> -->
                         </div>
                         <div class="row">
-                            <input class="input-group-text" type="number" name="price" id="price" placeholder="Price">
+                            <input class="input-group-text" type="number" name="updatePrice" id="price" placeholder="Price">
                         </div>
                         <div class="row">
-                            <input class="input-group-text" type="text" name="type" id="name" placeholder="Name">
+                            <input class="input-group-text" type="text" name="type" id="updateName" placeholder="Name">
 
                         </div>
 
