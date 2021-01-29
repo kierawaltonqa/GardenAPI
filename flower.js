@@ -1,10 +1,11 @@
 `use strict`;
 
 //const flower = document.querySelector("#flower");
-const flowertype = document.querySelector("#type");
+const flowertype = document.querySelector("#name");
 const flowercolour = document.querySelector("#colour");
 const poisonous = document.querySelector("#poison");
 const price = document.querySelector("#price");
+const height = document.querySelector("#height");
 
 
 //read flower method
@@ -35,12 +36,14 @@ const createFlower = () => {
     const flowerColour = flowercolour.value;
     const flowerPoison = poisonous.value;
     const flowerPrice = price.value;
+    const flowerHeight = height.value;
 
     let data = {
         type: flowerType,
         colour: flowerColour,
         poisonous: flowerPoison,
-        price: flowerPrice
+        price: flowerPrice,
+        height: flowerHeight
     }
     fetch("http://localhost:8082/flower/create", {
         method: "POST",
