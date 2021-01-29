@@ -6,6 +6,7 @@ const flowercolour = document.querySelector("#colour");
 const poisonous = document.querySelector("#poison");
 const price = document.querySelector("#price");
 const height = document.querySelector("#height");
+const flowerid = document.querySelector("#id");
 
 
 //read flower method
@@ -58,5 +59,21 @@ const createFlower = () => {
 }
 createFlower();
 
+//delete method
 
+const deleteFlower = () => {
+    const flowerID = flowerid.value;
 
+    fetch("http://localhost:8082/flower/delete/5", {
+        method: "DELETE",
+        body: JSON.stringify(flowerID),
+        headers: { "Content-Type": "application/json" }
+    })
+        .then(response => response.json())
+        .then(info => {
+            console.log(info);
+        })
+        .catch(err => console.error(`Stop!! ${err}`));
+}
+
+deleteFlower();
