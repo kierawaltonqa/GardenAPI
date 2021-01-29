@@ -1,5 +1,9 @@
-#belowHeader {
+
+
+body {
     background-image: url("/GardenAPI/Resources/flowers.png");
+    background-size: 100%;
+    back
 }
 
 #header {
