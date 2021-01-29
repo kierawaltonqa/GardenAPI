@@ -93,7 +93,7 @@
                                 <input class="input-group-text" type="number" id="height" placeholder="height" />
                             </div>
                             <div class="mb-3">
-                                <label for="poisonous">Poisonous?</label>
+                                <label class="display-6" for="poisonous">Poisonous?</label>
                                 
                                 <input class="input-group-text" type="text" id="poisonous" placeholder="Please enter Yes or No" />
                                 
@@ -121,38 +121,45 @@
 
         <!-- Modal for update -->
         
-        <div class="modal" id="updateMethod">
+        <div class="modal fade " id="updateMethod" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="modal-title">Create your flower</h2>
+                        <h2 class="modal-title">Update your flower</h2>
                         <button type="button" class="close" data-dismiss="modal">
                             <span>&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <input class="input-group-text" type="text" id="updateColour" placeholder="colour" />
-                        </div>
-                        <div class="row">
-                            <input class="input-group-text" type="number" id="updateHeight" placeholder="height" />
-                        </div>
-                        <div class="row">
+                        <form>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="number" id="id" placeholder="Enter Flower ID" />
+                            </div>
 
-                            <input class="input-group-text" type="text" id="updatePoisonous" placeholder="Please enter Yes or No" />
-
-                            <!-- <label>Poisonous?</p>
-                                <input type="radio" id="yes" name="Poisonous?">Yes </input> <br />
-                                <input type="radio" id="no" name="Poisonous?">No </input> <br /> -->
+                            <div class="mb-3">
+                                <input class="input-group-text" type="text" id="colour" placeholder="colour" />
+                            </div>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="number" id="height" placeholder="height" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="display-6" for="poisonous">Poisonous?</label>
+                                
+                                <input class="input-group-text" type="text" id="poisonous" placeholder="Please enter Yes or No" />
+                                
+                                <!-- <label>Poisonous?</p>
+                                    <input type="radio" id="yes" name="Poisonous?">Yes </input> <br />
+                                    <input type="radio" id="no" name="Poisonous?">No </input> <br /> -->
+                                </div>
+                                <div class="mb-3">
+                                    <input class="input-group-text" type="number" name="price" id="price" placeholder="Price">
+                                </div>
+                                <div class="mb-3">
+                            <input class="input-group-text" type="text" name="type" id="name" placeholder="Name">
+                            
                         </div>
-                        <div class="row">
-                            <input class="input-group-text" type="number" name="updatePrice" id="price" placeholder="Price">
-                        </div>
-                        <div class="row">
-                            <input class="input-group-text" type="text" name="type" id="updateName" placeholder="Name">
-
-                        </div>
-
+                        
+                    </form>
                     </div>
                     <div class="modal-footer">
                         <p>This is the modal footer</p>
