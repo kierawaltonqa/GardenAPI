@@ -3,7 +3,7 @@
 //const flower = document.querySelector("#flower");
 const flowertype = document.querySelector("#name");
 const flowercolour = document.querySelector("#colour");
-const poisonous = document.querySelector("#poison");
+const poisonous = document.querySelector("#poisonous");
 const price = document.querySelector("#price");
 const height = document.querySelector("#height");
 const flowerid = document.querySelector("#id");
@@ -28,8 +28,8 @@ const readFlowers = () => {
             console.error(err);
         })
 }
-readFlowers();
 
+readFlowers();
 
 //create flower method
 const createFlower = () => {
@@ -57,23 +57,21 @@ const createFlower = () => {
         })
         .catch(err => console.error(`Stopppppp! ${err}`));
 }
-createFlower();
 
-//delete method
 
+//delete flower method
 const deleteFlower = () => {
     const flowerID = flowerid.value;
 
-    fetch("http://localhost:8082/flower/delete/5", {
+    let data = {
+        id: flowerID
+    }
+
+    fetch(`http://localhost:8082/flower/delete/${flowerID}`, {
         method: "DELETE",
-        body: JSON.stringify(flowerID),
-        headers: { "Content-Type": "application/json" }
     })
-        .then(response => response.json())
-        .then(info => {
-            console.log(info);
-        })
+        // .then(response => response.json())
+        .then(response => console.log(`flower with ID ${flowerID} deleted`)
+        )
         .catch(err => console.error(`Stop!! ${err}`));
 }
-
-deleteFlower();

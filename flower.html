@@ -47,7 +47,7 @@
         <nav class="container">
             <nav class="row">
                 <nav class="col-md">
-                    <h1 class="text-center display-1">Garden Creation</h1>
+                    <h1 class="text-center display-1">Flower Creation</h1>
                 </nav>
             </nav>
             <nav class="row">
@@ -60,9 +60,34 @@
                 </nav>
 
             </nav>
+            <br />
+            <nav class="row">
+                <nav class="col-md">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                        data-target="#updateMethod">
+                        Update
+                    </button>
+
+                </nav>
+
+            </nav>
+            </br>
+            <nav class="row">
+                <nav class="col-md">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                        data-target="#deleteMethod">
+                        Delete
+                    </button>
+
+                </nav>
+
+            </nav>
 
         </nav>
-        <div class="modal" id="createMethod">
+
+        <!--                CREATE FLOWER MODAL -->
+
+        <div class="modal fade " id="createMethod" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -72,43 +97,120 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <input class="input-group-text" type="text" id="colour" placeholder="colour" />
-                        </div>
-                        <div class="row">
-                            <input class="input-group-text" type="number" id="height" placeholder="height" />
-                        </div>
-                        <div class="row">
-                            <input class="input-group-text" type="text" id="poison" placeholder="poison" />
-                            <!-- <label>Poisonous?</p>
-                                <input type="radio" id="yes" name="Poisonous?">Yes </input> <br />
-                                <input type="radio" id="no" name="Poisonous?">No </input> <br /> -->
-                        </div>
-                        <div class="row">
-                            <input class="input-group-text" type="number" name="price" id="price" placeholder="Price">
-                        </div>
-                        <div class="row">
-                            <input class="input-group-text" type="text" name="type" id="name" placeholder="Name">
+                        <form>
 
-                        </div>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="text" id="colour" placeholder="colour" />
+                            </div>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="number" id="height" placeholder="height" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="display-6" for="poisonous">Poisonous?</label>
 
+                                <input class="input-group-text" type="text" id="poisonous"
+                                    placeholder="Please enter Yes or No" />
+
+                                <!-- <label>Poisonous?</p>
+                                    <input type="radio" id="yes" name="Poisonous?">Yes </input> <br />
+                                    <input type="radio" id="no" name="Poisonous?">No </input> <br /> -->
+                            </div>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="number" name="price" id="price"
+                                    placeholder="Price">
+                            </div>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="text" name="type" id="name" placeholder="Name">
+
+                            </div>
+
+                        </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success" onclick="createFlower();"
-                            data-dismiss="modal">Create</button>
-                        <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+                        <button type="button" class="btn btn-success" onclick="createFlower();">Create your
+                            flower:</button>
                     </div>
                 </div>
             </div>
         </div>
 
 
+        <!--         Modal for update -->
 
+        <div class="modal fade " id="updateMethod" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Update your flower</h2>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="number" id="id" placeholder="Enter Flower ID" />
+                            </div>
 
+                            <div class="mb-3">
+                                <input class="input-group-text" type="text" id="colour" placeholder="colour" />
+                            </div>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="number" id="height" placeholder="height" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="display-6" for="poisonous">Poisonous?</label>
 
+                                <input class="input-group-text" type="text" id="poisonous"
+                                    placeholder="Please enter Yes or No" />
 
+                                <!-- <label>Poisonous?</p>
+                                    <input type="radio" id="yes" name="Poisonous?">Yes </input> <br />
+                                    <input type="radio" id="no" name="Poisonous?">No </input> <br /> -->
+                            </div>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="number" name="price" id="price"
+                                    placeholder="Price">
+                            </div>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="text" name="type" id="name" placeholder="Name">
 
+                            </div>
 
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <p>This is the modal footer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--        Modal for delete -->
+
+        <div class="modal fade " id="deleteMethod" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Delete your flower:</h2>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <input class="input-group-text" type="number" id="id" placeholder="Enter Flower ID" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" onclick="deleteFlower();">Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
