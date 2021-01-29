@@ -1,6 +1,12 @@
 body{
+    
     text-align: center; 
-    font-family: monospace;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(214,214,214,1) 100%);
+    font-family: 'Press Start 2P', cursive;
+    background-color:white; 
+}
+
+.img-garden{
+
+    height: 500px;
+
 }
