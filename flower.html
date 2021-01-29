@@ -52,12 +52,13 @@
             </nav>
             <nav class="row">
                 <nav class="col-md">
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#createMethod">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                        data-target="#createMethod">
                         Create
                     </button>
 
                 </nav>
-                
+
             </nav>
 
         </nav>
@@ -71,13 +72,26 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <input type="text" id="colour" placeholder="colour"/>
-                        <br />
-                        <input type="number" id="height" placeholder="height"/
-                    <br />
-                    <label>Poisonous?</label>
-                        <input type="radio" id="height" placeholder="height"/
-                        <br />
+                        <div class="row">
+                            <input class="input-group-text" type="text" id="colour" placeholder="colour" />
+                        </div>
+                        <div class="row">
+                            <input class="input-group-text" type="number" id="height" placeholder="height" />
+                        </div>
+                        <div class="row">
+
+                            <label>Poisonous?</p>
+                                <input type="radio" id="yes" name="Poisonous?">Yes </input> <br />
+                                <input type="radio" id="no" name="Poisonous?">No </input> <br />
+                        </div>
+                        <div class="row">
+                            <input class="input-group-text" type="number" name="price" id="price" placeholder="Price">
+                        </div>
+                        <div class="row">
+                            <input class="input-group-text" type="text" name="type" id="name" placeholder="Name">
+
+                        </div>
+
                     </div>
                     <div class="modal-footer">
                         <p>This is the modal footer</p>
